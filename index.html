@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vivek Koranga — Professional Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="progress"><div id="progress-bar"></div></div>
+
+  <header class="nav" id="topNav">
+    <div class="container nav-inner">
+      <div class="brand">Vivek Koranga</div>
+      <nav class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#units">Units</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="assets/resume.pdf" download class="btn small">Resume</a>
+        <button id="themeToggle" class="btn icon" aria-label="Toggle theme">🌙</button>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-inner container">
+        <div class="hero-photo">
+          <img id="profilePhoto" src="assets/profile.png" alt="Vivek Koranga">
+          <!-- <label class="upload" title="Change photo">
+            <input id="photoInput" type="file" accept="image/*">
+            Change Photo
+          </label> -->
+        </div>
+        <div class="hero-content">
+          <h1>Vivek Koranga</h1>
+          <p class="sub">B.Tech (CSE) — 3rd Semester | Graphic Era Hill University</p>
+          <p class="lead">I’m a motivated computer science student building communication and presentation skills. This portfolio highlights coursework, reflections and projects focused on communication, public speaking and practical skills.</p>
+          <div class="meta">
+            <span><strong>Roll:</strong> 73</span>
+            <span><strong>Section:</strong> C1</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="units" class="container card sections">
+      <h2>Course Units</h2>
+      <div class="unit-grid">
+        <button class="unit-btn" data-target="u1">UNIT 1</button>
+        <button class="unit-btn" data-target="u2">UNIT 2</button>
+        <button class="unit-btn" data-target="u3">UNIT 3</button>
+        <button class="unit-btn" data-target="u4">UNIT 4</button>
+        <button class="unit-btn" data-target="u5">UNIT 5</button>
+      </div>
+
+      <article id="u1" class="unit detail">
+        <h3>UNIT 1: SWOC Analysis (6 Hours)</h3>
+        <ul>
+          <li>Explored personal strengths, weaknesses, opportunities, and challenges through reflective exercises.</li>
+          <li>Identified areas for self-improvement and growth in both academic and professional life.</li>
+          <li>Engaged in writing and role-play activities to enhance self-awareness and confidence.</li>
+        </ul>
+      </article>
+
+      <article id="u2" class="unit detail">
+        <h3>UNIT 2: Self Introduction I (7 Hours)</h3>
+        <ul>
+          <li>Learned to introduce oneself effectively with clarity, confidence, and authenticity.</li>
+          <li>Refined verbal and non-verbal communication through practical sessions.</li>
+          <li>Developed comfort in public speaking and personal branding via recorded presentations.</li>
+        </ul>
+      </article>
+
+      <article id="u3" class="unit detail">
+        <h3>UNIT 3: Presentation Skills I (8 Hours)</h3>
+        <ul>
+          <li>Strengthened ability to plan, design, and deliver engaging presentations.</li>
+          <li>I gained understanding of audience analysis, logical idea organization, and body language use.</li>
+          <li>Enhanced persuasion and communication impact through real-world topic discussions.</li>
+        </ul>
+      </article>
+
+      <article id="u4" class="unit detail">
+        <h3>UNIT 4: Public Speaking I (5 Hours)</h3>
+        <ul>
+          <li>Improved stage presence and spontaneity through JAM sessions and extempore activities.</li>
+          <li>Focused on articulation, anxiety management, and tonal adaptation for varied audiences.</li>
+          <li>Incorporated feedback to refine overall delivery style.</li>
+        </ul>
+      </article>
+
+      <article id="u5" class="unit detail">
+        <h3>UNIT 5: Art of Conversation (4 Hours)</h3>
+        <ul>
+          <li>Enhanced interpersonal communication through small talk and professional etiquette practice.</li>
+          <li>Developed ability to initiate and sustain meaningful personal and formal conversations.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projects" class="container card sections">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <h4>Presentation Project</h4>
+          <p>Designed and delivered a persuasive presentation on a contemporary topic, focusing on structure, visuals and delivery.</p>
+        </div>
+        <div class="project">
+          <h4>Recorded Introduction</h4>
+          <p>Created a short video introducing myself and demonstrating speaking skills and personal branding.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="container card sections">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">
+          <span>Public Speaking</span>
+          <div class="bar"><div class="fill" style="width:78%"></div></div>
+        </div>
+        <div class="skill">
+          <span>Presentation Design</span>
+          <div class="bar"><div class="fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill">
+          <span>Communication</span>
+          <div class="bar"><div class="fill" style="width:85%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container card sections">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, email me or use the form below.</p>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <p class="note">This demo form triggers your default mail client.</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Vivek Koranga — Graphic Era Hill University</p>
+    </div>
+  </footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

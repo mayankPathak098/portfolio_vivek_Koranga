@@ -1,0 +1,86 @@
+:root{
+  --bg:#0f172a;
+  --surface:#0b1220;
+  --muted:#94a3b8;
+  --accent:#60a5fa;
+  --glass: rgba(255,255,255,0.06);
+  --card:#ffffff;
+  --light-bg:#f7fbff;
+}
+
+/* Light theme variables (applied when .light on html) */
+html.light{
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --muted:#64748b;
+  --accent:#0284c7;
+  --glass: rgba(255,255,255,0.6);
+  --card:#ffffff;
+  --light-bg:#f7fbff;
+}
+
+*{box-sizing:border-box}
+body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--card); -webkit-font-smoothing:antialiased;}
+.container{max-width:1100px; margin:0 auto; padding:22px;}
+.nav{position:sticky; top:0; z-index:40; backdrop-filter: blur(6px); background:linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.25)); box-shadow:0 6px 18px rgba(2,6,23,0.4);}
+html.light .nav{background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; gap:12px;}
+.brand{font-weight:700; font-size:18px;}
+.nav-links{display:flex; align-items:center; gap:12px;}
+.nav-links a{color:var(--card); text-decoration:none; padding:8px 10px; border-radius:8px; font-weight:600;}
+html.light .nav-links a{color:var(--surface)}
+.btn{background:var(--accent); color:#072033; padding:8px 12px; border-radius:8px; text-decoration:none; border:none; cursor:pointer; font-weight:700;}
+.btn.small{padding:6px 10px; font-size:14px;}
+.btn.icon{background:transparent; color:var(--card); font-size:18px; padding:8px 10px;}
+.hamburger{display:none; background:transparent; border:none; color:var(--card); font-size:20px}
+
+/* progress bar */
+#progress{position:fixed; top:0; left:0; width:100%; height:4px; z-index:60; background:transparent}
+#progress-bar{height:100%; width:0%; background:linear-gradient(90deg,var(--accent), #7dd3fc);}
+
+/* Hero */
+.hero{padding:48px 0; text-align:center; background:linear-gradient(180deg, rgba(96,165,250,0.08), transparent);}
+.hero-inner{display:flex; gap:28px; align-items:center; justify-content:center; flex-wrap:wrap;}
+.hero-photo{position:relative;}
+.hero-photo img{width:220px; height:220px; border-radius:20px; object-fit:cover; box-shadow:0 12px 40px rgba(2,6,23,0.6);}
+.upload{display:inline-block; margin-top:10px; color:var(--muted); cursor:pointer}
+.upload input{display:none}
+.hero-content h1{margin:0; font-size:30px; color:var(--card)}
+.sub{color:var(--muted); margin:6px 0; font-weight:600}
+.lead{max-width:640px; margin:12px auto; color:var(--muted)}
+
+/* Card / sections */
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:14px; padding:18px; margin:20px 0; box-shadow:0 8px 30px rgba(2,6,23,0.35);}
+.unit-grid{display:flex; gap:10px; flex-wrap:wrap; margin:12px 0;}
+.unit-btn{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--card); padding:10px 14px; border-radius:10px; cursor:pointer; font-weight:700;}
+html.light .unit-btn{border-color: rgba(2,132,199,0.12); color:var(--surface)}
+.unit.detail{margin-top:18px; padding:14px; border-radius:10px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+
+/* Projects */
+.projects-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:12px;}
+.project{padding:12px; border-radius:10px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+
+/* Skills */
+.skills .skill{margin:10px 0}
+.bar{height:12px; background:rgba(255,255,255,0.06); border-radius:8px; overflow:hidden}
+.fill{height:100%; background:linear-gradient(90deg, var(--accent), #7dd3fc)}
+
+/* Contact */
+#contactForm input, #contactForm textarea{width:100%; padding:10px; margin:8px 0; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:transparent; color:var(--card)}
+#contactForm button{margin-top:8px}
+
+/* Footer */
+.site-footer{padding:28px 0; text-align:center; color:var(--muted)}
+
+/* Animations */
+.sections, .project, .unit, .hero-photo, .hero-content {opacity:0; transform:translateY(10px); transition:all 700ms cubic-bezier(.2,.9,.2,1);}
+
+/* visible class toggled by JS */
+.visible{opacity:1; transform:none}
+
+/* Responsive */
+@media (max-width:900px){
+  .projects-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .hamburger{display:block}
+}
